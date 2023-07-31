@@ -1,0 +1,52 @@
+# ======================================
+# Config ===============================
+php:
+	date.timezone: Europe/Prague
+	# session.save_path: %tempDir%/session
+
+# ======================================
+# Parameters ===========================
+parameters:
+
+# ======================================
+# Extension ============================
+extensions:
+	framex: Contributte\FrameX\DI\FrameXExtension
+
+framex:
+	# List of middlewares (position mathers)
+	middlewares:
+		tracy: Contributte\FrameX\Middleware\TracyMiddleware(%debugMode%)
+		cors: Contributte\FrameX\Middleware\CorsMiddleware
+		negotiation: Contributte\FrameX\Middleware\NegotiationMiddleware
+
+	# List of routes
+	routing:
+		- path: /v1/ping
+		  method: GET
+		  controller: App\Api\Ping\GetPingController
+
+		- path: /v1/job
+		  method: POST
+		  controller: App\Api\Job\CreateJobController
+
+		- path: "/v1/job/{uuid}"
+		  method: PUT
+		  controller: App\Api\Job\UpdateJobController
+
+		- path: /v1/job
+		  method: GET
+		  controller: App\Api\Job\ListJobController
+
+		- path: "/v1/job/{uuid}"
+		  method: DELETE
+		  controller: App\Api\Job\DeleteJobController
+
+# ======================================
+# Services =============================
+services:
+	- App\Api\Ping\GetPingController
+	- App\Api\Job\CreateJobController
+	- App\Api\Job\UpdateJobController
+	- App\Api\Job\ListJobController
+	- App\Api\Job\DeleteJobController
