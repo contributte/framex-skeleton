@@ -26,7 +26,7 @@ Website ðŸš€ <a href="https://contributte.org">contributte.org</a> | Contact ðŸ‘
 
 ## Goal
 
-Main goal is to show how [contributte/nella](https://github.com/contributte/sentry) can boost your [Nette](https://nette.org) based project..
+Main goal is to show how to use [contributte/framex](https://github.com/contributte/framex) wrapper around [Framework X](https://framework-x.org/) together with [Nette](https://nette.org).
 
 ## Demo
 
@@ -34,7 +34,7 @@ https://examples.contributte.org/framex-skeleton/
 
 ## Installation
 
-You will need `PHP 8.1+` and [Composer](https://getcomposer.org/).
+You will need `PHP 8.2+` and [Composer](https://getcomposer.org/).
 
 Create project using composer.
 
