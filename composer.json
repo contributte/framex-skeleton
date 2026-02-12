@@ -13,16 +13,16 @@
   "license": "MIT",
   "type": "project",
   "require": {
-    "php": ">=8.2",
-    "contributte/kernel": "^0.1.0",
-    "contributte/framex": "^0.1.0",
-    "contributte/utils": "^0.6.0"
+    "php": "^8.4",
+    "contributte/kernel": "^0.2.0",
+    "contributte/framex": "^0.3.0",
+    "contributte/utils": "^0.7.0"
   },
   "require-dev": {
-    "contributte/qa": "^0.3",
-    "contributte/dev": "^0.4",
-    "contributte/phpstan": "^0.1",
-    "contributte/tester": "^0.2"
+    "contributte/qa": "^0.4",
+    "contributte/dev": "^0.6",
+    "contributte/phpstan": "^0.3",
+    "contributte/tester": "^0.4"
   },
   "autoload": {
     "psr-4": {
