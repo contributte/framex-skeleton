@@ -4,12 +4,16 @@ namespace App\Api\Job;
 
 use Contributte\FrameX\Http\EntityResponse;
 
+/** @extends EntityResponse<null> */
 class DeleteJobResponse extends EntityResponse
 {
 
-	public static function of(): EntityResponse
+	public static function of(): self
 	{
-		return self::create();
+		$self = new self();
+		$self->payload = null;
+
+		return $self;
 	}
 
 }

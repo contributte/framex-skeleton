@@ -5,12 +5,13 @@ namespace App\Api\Job;
 use App\Domain\Job\Job;
 use Contributte\FrameX\Http\EntityResponse;
 
+/** @extends EntityResponse<array<string, mixed>> */
 class UpdateJobResponse extends EntityResponse
 {
 
-	public static function of(Job $job): EntityResponse
+	public static function of(Job $job): self
 	{
-		$self = self::create();
+		$self = new self();
 		$self->payload = $job->toArray();
 
 		return $self;
