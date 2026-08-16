@@ -26,17 +26,16 @@ make dev
 
 The development server listens on <http://localhost:8000>.
 
-## Endpoints
+In another terminal, verify the API:
 
-The configured API routes are:
+```bash
+curl http://localhost:8000/v1/ping
+# pong
+```
 
-| Method | Path | Purpose |
-| --- | --- | --- |
-| `GET` | `/v1/ping` | Ping endpoint |
-| `POST` | `/v1/job` | Create a job |
-| `GET` | `/v1/job` | List jobs |
-| `PUT` | `/v1/job/{uuid}` | Update a job |
-| `DELETE` | `/v1/job/{uuid}` | Delete a job |
+## Next steps
+
+After the ping check, explore the job routes configured in [`config/config.neon`](config/config.neon).
 
 ## Quality checks
 
