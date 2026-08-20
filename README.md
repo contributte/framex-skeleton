@@ -7,18 +7,16 @@ Fast API skeleton combining [Framework X](https://framework-x.org/), [Nette](htt
 - PHP 8.4+
 - [Composer](https://getcomposer.org/)
 
-## Create a project
+## API quick start
 
 ```bash
 composer create-project -s dev contributte/framex-skeleton acme
 cd acme
-make project
 make init
+make setup
 ```
 
-`make project` installs dependencies and prepares writable runtime directories. `make init` copies `config/local.neon.example` to `config/local.neon` for local parameter and service overrides.
-
-## Run the API
+Composer installs the dependencies. `make init` creates the ignored `config/local.neon`, and `make setup` prepares writable runtime directories.
 
 ```bash
 make dev
@@ -26,12 +24,13 @@ make dev
 
 The development server listens on <http://localhost:8000>.
 
-In another terminal, verify the API:
+In another terminal, request the bundled ping route:
 
 ```bash
 curl http://localhost:8000/v1/ping
-# pong
 ```
+
+The controller currently returns `pong` as the response payload.
 
 ## Next steps
 
